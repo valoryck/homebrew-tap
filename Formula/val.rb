@@ -11,7 +11,7 @@ class Val < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/valoryck/val/releases/download/v0.1.1/val_0.1.1_darwin_amd64.tar.gz"
-      sha256 "71051f577cbad8f01fa930d75c94aa0968e18218e951e43545c33493992f91c8"
+      sha256 "f3f26249dc41b0cf30912bf4d9b0db8601487c980ad355c73df1e92b7053f5a5"
 
       define_method(:install) do
         bin.install "val"
@@ -20,7 +20,7 @@ class Val < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/valoryck/val/releases/download/v0.1.1/val_0.1.1_darwin_arm64.tar.gz"
-      sha256 "3f9dbc44fee0c3b4efc48e183587eadab641fe0e48c9b0b1ed5547f67bccdee5"
+      sha256 "51130003be37523b8d6a465a28a63907ecea155a0b0d8e58de1a34cbbc72deb6"
 
       define_method(:install) do
         bin.install "val"
@@ -32,7 +32,7 @@ class Val < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/valoryck/val/releases/download/v0.1.1/val_0.1.1_linux_amd64.tar.gz"
-      sha256 "f1b4e0af3927ccfbd89ef8626adbfc35a79fb6b78382b5c68a3f154092683520"
+      sha256 "edf910303f474536948375bc3b18931ceab74b9e35a2c8816a64f04733c2e8c3"
       define_method(:install) do
         bin.install "val"
         generate_completions_from_executable(bin/"val", "completion")
@@ -40,7 +40,7 @@ class Val < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/valoryck/val/releases/download/v0.1.1/val_0.1.1_linux_arm64.tar.gz"
-      sha256 "b51b1dcc415e5e50c0062a06e28f29ff539a3a14821a025573d89d48ef2f42b2"
+      sha256 "7ade5b81512aa4ddaf22ecca901c5086a11d8b795cf81f74cf08460a6cfeb87e"
       define_method(:install) do
         bin.install "val"
         generate_completions_from_executable(bin/"val", "completion")
