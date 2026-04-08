@@ -5,13 +5,13 @@
 class Val < Formula
   desc "Val — security & risk intelligence from your terminal"
   homepage "https://valoryck.com"
-  version "0.1.0"
+  version "0.1.1"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/valoryck/val/releases/download/v0.1.0/val_0.1.0_darwin_amd64.tar.gz"
-      sha256 "38b7f69eddaba208fa9952b0f2ee358b12fc5ab5a8d94f3bad84a92427701431"
+      url "https://github.com/valoryck/val/releases/download/v0.1.1/val_0.1.1_darwin_amd64.tar.gz"
+      sha256 "71051f577cbad8f01fa930d75c94aa0968e18218e951e43545c33493992f91c8"
 
       define_method(:install) do
         bin.install "val"
@@ -19,8 +19,8 @@ class Val < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/valoryck/val/releases/download/v0.1.0/val_0.1.0_darwin_arm64.tar.gz"
-      sha256 "819d41c008527b3a6484ab6104f3da233a1988f74b5db8c92d5268d9d9860109"
+      url "https://github.com/valoryck/val/releases/download/v0.1.1/val_0.1.1_darwin_arm64.tar.gz"
+      sha256 "3f9dbc44fee0c3b4efc48e183587eadab641fe0e48c9b0b1ed5547f67bccdee5"
 
       define_method(:install) do
         bin.install "val"
@@ -31,16 +31,16 @@ class Val < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/valoryck/val/releases/download/v0.1.0/val_0.1.0_linux_amd64.tar.gz"
-      sha256 "2593204ec5f84b07c1dd6c1fa755627460b2ed3d702b362cb5e44e64b92a56dc"
+      url "https://github.com/valoryck/val/releases/download/v0.1.1/val_0.1.1_linux_amd64.tar.gz"
+      sha256 "f1b4e0af3927ccfbd89ef8626adbfc35a79fb6b78382b5c68a3f154092683520"
       define_method(:install) do
         bin.install "val"
         generate_completions_from_executable(bin/"val", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/valoryck/val/releases/download/v0.1.0/val_0.1.0_linux_arm64.tar.gz"
-      sha256 "63fbc47197d7662681c4932579ac283925b0e5078fdd6364f3c846612245fbb5"
+      url "https://github.com/valoryck/val/releases/download/v0.1.1/val_0.1.1_linux_arm64.tar.gz"
+      sha256 "b51b1dcc415e5e50c0062a06e28f29ff539a3a14821a025573d89d48ef2f42b2"
       define_method(:install) do
         bin.install "val"
         generate_completions_from_executable(bin/"val", "completion")
